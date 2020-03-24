@@ -158,14 +158,17 @@ Codes and algorithms are written using mono-spaced font, such as
 Courier New, Consolas or their variations. If the length of the code
 or algorithm is less than 10 lines and you do not refer to it later on
 in the text, you can present it similarly to formulas.  Here's an
-example showing a snippet:
+example showing a snippet (install package \verb!listings! for coloring your code according to type):
 
+\begin{verbatim}
 \begin{lstlisting}[style=console, % title={Template files} ] 
 all: ${TARGET}.tex
 	pdflatex ${TARGET}.tex
 	bibtex ${TARGET}
 	pdflatex ${TARGET}.tex
 \end{lstlisting}  
+\end{verbatim}
+
 
 If the code is longer but shorter than a page, you present like a
 figure (Program 4.1) titled ``Program'' or ``Algorithm''.
