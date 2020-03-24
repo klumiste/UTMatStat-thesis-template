@@ -1,0 +1,107 @@
+\section{Using references}
+
+This section will give an overview on how to use references.
+
+\subsection{References and citation}
+
+The list of references is the last section of the document. References can be ordered in alphabetic order (preferred) or in order of citation. The references section of this document covers three most common types of resources and also has some examples. 
+The style of formatting of references provided in this document is recommended, but not mandatory. The key points to remember are that 
+\vspace{-2mm}
+\begin{itemize}
+\item all the relevant information about a resource should be included;
+\item references of same type should be formatted using same style (e.g., all books have their style, articles their style, etc.).
+\end{itemize}
+
+The most common citation style is via the last name(s) of the author(s) and the year of publication (also known as Chicago style referencing). For example, if this sentence is taken from the first reference in the list (see the last section), it can be referred to as (Articleauthor, year). If a whole paragraph needs reference to the same resource, it can simply be added to the end of the whole paragraph, as is done with the second reference. (Bookauthor et al., year)
+
+Furthermore, if a whole section or subsection needs reference(s) then this can be specified in the beginning of this section or subsection. For example, one may say something like "\textit{We refer to Bookauthor et al. (year) and Bookauthor2 \& Bookauthor (year) for the results of this section.}". 
+
+For a complete guide on Chicago style referencing see: \href{http://libguides.library.curtin.edu.au/referencing/chicago}{Chicago 17th B (Author-Date) referencing guide}
+
+
+\subsection{Using literature}
+
+The theoretical part is almost always based solely on the literature.
+When discussing your contribution, you may also need to cite some 
+known results in literature.
+
+Remember to avoid plagiarism!  If you copy, either verbatim or with
+slight changes (or, example, in your own translation) text from some
+source, make it clear to the reader.  Mark your quotes (using
+quotation marks or some other clear manner) and give a precise
+citation.  If you do not quote verbatim, mark any changes you have
+made.  In most situations, however, it is better to use your own
+words, based on more than one source.  Even then, give clear
+citations.
+
+This guidelines document uses the \textsc{Bib\LaTeX}
+system \parencite{biblatex-manual} and Chicago
+style \parencite{biblatex-chicago-manual}.  You can switch off this
+automation by using the \string\documentclass-option manualbib, but
+that means you have to take care of the bibliography yourself, and the
+techniques discussed below may not be available. See Appendix 2 for 
+information on manual bibliography. Please note that the
+Institute recommends using a Chicago style for your bibliography. 
+% MIS STIILI SOOVITAME?
+
+\subsection{Citations}
+
+You can cite sources in two ways.  First, you can use the citation as
+a noun: \textcite[Chapter~8.8.4]{aho-compilers} briefly discuss the
+use of graph coloring in the register allocation phase of a compiler.
+In this case, use the \string\textcite\ command.  Second, you can use
+a citation as a parenthetical, which is not read aloud: Graph coloring
+is one possibile way to allocate
+registers \parencite[Chapter~8.8.4]{aho-compilers}.  Use the
+\string\parencite\ command for this.
+
+Both commands (\string\textcite\ and \string\parencite) take three
+parameters, two of which are optional.  The first (optional) parameter
+is a pre-note, the second (optional) parameter is a post-note, and the
+third (mandatory) parameter is the citation
+key \parencite[see][Section~3.7]{biblatex-manual}.  The citation in
+the preceding sentence was made using the following command:
+
+\begingroup\footnotesize
+\begin{verbatim}
+\parencite[see][Section~3.7]{biblatex-manual}
+\end{verbatim}
+\endgroup
+
+If you give these commands just one optional argument (that is, one
+enclosed in square brackets), it will be interpreted as a post-note.
+If you want to give only a pre-note, leave the post-note empty
+\parencite[see][]{biblatex-manual}:
+
+\begingroup\footnotesize
+\begin{verbatim}
+\parencite[see][]{biblatex-manual}
+\end{verbatim}
+\endgroup
+
+It is also possible to cite multiple sources in the same citation
+%
+\parencites%
+  [see][Section~3.7]{biblatex-manual}%
+  [regarding citations in general, see also][Section~5.3.2]%
+    {biblatex-chicago-manual}%
+\relax.
+%
+Use the command  \string\parencites\
+for this.  For each citation, give it the same parameters as you would give
+a single \string\parencite\
+command.  It is good practice (but often not necessary) to end the command
+in a \string\relax, so that no surprises ensue.
+
+\begingroup\footnotesize
+\begin{verbatim}
+\parencites%
+  [see][Section~3.7]{biblatex-manual}%
+  [regarding citations in general, see also][Section~5.3.2]%
+    {biblatex-chicago-manual}%
+\relax.
+\end{verbatim}
+\endgroup
+
+If you break the command into multiple lines, use the comment sign
+to end each line, to prevent spurious spaces.

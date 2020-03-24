@@ -1,0 +1,61 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{graphicx}
+\usepackage{listings}
+%\usepackage{hyperref}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,filecolor=black]{hyperref}
+\setlength{\parindent}{0pt} \setlength{\parskip 5pt plus 2pt minus 1pt} \frenchspacing
+
+% Settings to use automated references
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+\addbibresource{bibliography.bib}
+
+\title{Title of the thesis}
+\author{Author name}
+\begin{document}
+
+% Start with the titlepage
+\include{00_titlepage}
+
+% Start page numbers
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% An abstract (in English and Estonian)
+\include{01_abstract}
+
+% Print out the table of contents
+\tableofcontents
+
+% Structure of the thesis, each part is set in a separate .tex file
+\include{02_introduction}
+\include{03_1_ch1_structure}
+\include{03_2_ch2_formatting}
+\include{03_3_ch3_citations}
+\include{08_conclusions}
+
+% Add the bibliography using the BibTeX functionality. 
+%  For manual bibliography see Appendix 2
+\pagebreak
+\addcontentsline{toc}{section}{List of references}
+\printbibliography
+
+% KAS MUU KEELNE KOKKUVÕTE ON IKKA VEEL NÕUTUD?
+% Thesis also has to include a summary in a language other than the thesis language
+%\include{09_kokkuvote}
+
+% Should there be any appendixes, then add them here
+\include{10_1_appendix1}
+\include{10_2_appendix2}
+
+% Copyright statement
+\include{copyright}
+
+\end{document}

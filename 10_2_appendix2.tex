@@ -1,0 +1,36 @@
+\section*{Appendix 2 -- Some helpful tips}
+\addcontentsline{toc}{section}{Appendix 2 -- Some helpful tips}  
+
+Brief basics of writing style are:
+\begin{itemize}
+\item Always think of your reader when you are writing and proceed
+  logically from general to specific. "Write your thesis so that it would be understandable by your non-mathematician friend", Jüri Lember and "There is no such thing as too much explanation", Jüri Lember
+  \item Highlight your key points, for example, by discussing them in
+  separate chapters or presenting them in a table or figure. Use
+  \textit{italics} or \textbf{boldface} for emphasis, but don't overdo
+  it!
+\item Avoid long sentences and complicated statements. A full stop is
+  the best way to end a sentence.
+\item Use active verbs to make a dynamic impression but avoid the
+  first person pro-noun ``I'', except in your preface.
+\item Avoid jargon and wordiness. Use established terminology and
+  neutral language.
+\item The minimum length of chapters and sub-chapters is two
+  paragraphs, and you need to consider the balance of
+  chapters. Paragraphs must always consist of more than one sentence.
+\item Do not use more than three levels of headings, such as 4.4.2.
+\item Do not use too many abbreviations. Use capital and small letters
+  consistently.
+  \item Use \LaTeX for your thesis, \href{https://amrys.wordpress.com/2013/01/16/why-your-should-latex-your-dissertation-or-why-you-dont-have-to-write-your-dissertation-in-word/}{because of reasons}! Compile your document as often as possible. Debugging a \LaTeX document can be a nightmare, but if you at least know the last 4-5 steps that you took, then you can at least roll-back to latest working version.
+  \item Use a good \LaTeX Editor! It will save you a lot of time and spare some nerve cells.
+  \item In case of many formulas in the thesis and frequent cross-referencing between sections, then consider using equations numbering that includes the section number in front (instead of equation label (3) you will have (1.3) where 1 refers to the section where this formula is found). For this use the following command before \verb_\begin{document}_ statement:
+  \begin{verbatim}
+      \numberwithin{equation}{section}
+  \end{verbatim}
+  
+
+  \item Be responsible for every word you write! This is Your thesis.
+\end{itemize}
+
+Sometimes ending a section with list is considered as bad
+style. Therefore, it is better to have some text after it.
