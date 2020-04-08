@@ -1,5 +1,6 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 %\usepackage[estonian]{babel} % Eesti keelsetele lõputöödele
 
@@ -11,11 +12,8 @@
 \setlength{\parindent}{0pt} \setlength{\parskip 5pt plus 2pt minus 1pt} \frenchspacing
 
 % Settings to use automated references
-\usepackage[
-backend=biber,
-style=alphabetic,
-sorting=ynt
-]{biblatex}
+%\usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
+\usepackage[backend=bibtex,style=authoryear,sorting=ynt]{biblatex}
 \addbibresource{bibliography.bib}
 
 \title{Title of the thesis}
