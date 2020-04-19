@@ -63,6 +63,51 @@ LaTeX is the best editor for writing also the more complex equations, such as
   G^+(t,t')= \int G^+(E) \exp[-iE(t-t')/\hbar] dE.
 \end{equation}
 
+\subsection{Theorems and definitions}
+
+Mathematical thesis often include elements that require special formatting and numbering such as theorems, definitions, propositions, remarks, corollaries, lemmas and so on. Such formatting can be achieved by defining special environment with the \string\newtheorem\ command in the preamble of the document. For example:
+
+\begin{theorem}
+Let $f$ be a function whose derivative exists in every point, then $f$ is 
+a continuous function.
+\end{theorem}
+
+\begin{proof}
+If a derivative of function $f$ exists in point $x_0$ (meaning that $f$ is differentiable at point $x_0$), then $f$ is continuous at point $x_0$ (differentiability implies continuity - not proven here). 
+
+Assume that function $f$ is differentiable in every point, then that implies that $f$ is continuous at every point and $f$ is a continuous function.
+\end{proof}
+
+For the next theorem we need a definition:
+
+\begin{definition}
+A right triangle is a triangle in which one angle is a right angle (that is, a 90-degree angle).
+\end{definition}
+
+Notice that the definition does not have a number. This can be achieved by defining the definition environment with the \string\newtheorem*{}\ command.
+
+\begin{theorem}[Pythagorean theorem]
+\label{pythagorean}
+This is a theorem about right triangles and can be summarised in the next 
+equation 
+\[ x^2 + y^2 = z^2 \]
+\end{theorem}
+
+And a consequence of Theorem \ref{pythagorean} is the statement in the next 
+corollary (you can reference theorems when a label is assigned).
+
+\begin{corollary}
+There's no right rectangle whose sides measure 3cm, 4cm, and 6cm.
+\end{corollary}
+
+Notice that the Corollary has different numbering. This is because numbering of corollary is tied to the theorem environment with \string\newtheorem{corollary}{Corollary}[theorem]\ , where the square brackets determines the environment that will be used for numbering (also refered to as counter). The same logic can be applied to formulas and theorems, if there are many of such elements. Often the counters are determined by section, for example "Theorem 2.3" refers to the 3rd theorem in the 2nd section of a document. 
+
+By default, each theorem uses its own counter. However it is common for similar types of theorems (e.g. Theorems, Lemmas and Corollaries) to share a counter. In this case, define subsequent theorems as:
+\begin{verbatim}
+\newtheorem{<name>}[<counter>]{<Printed output>}
+\end{verbatim}
+where counter is the name of the counter to be used.
+
 
 \subsection{Figures}
 
