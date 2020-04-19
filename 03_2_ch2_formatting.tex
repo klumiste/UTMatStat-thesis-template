@@ -65,7 +65,7 @@ LaTeX is the best editor for writing also the more complex equations, such as
 
 \subsection{Theorems and definitions}
 
-Mathematical thesis often include elements that require special formatting and numbering such as theorems, definitions, propositions, remarks, corollaries, lemmas and so on. Such formatting can be achieved by defining special environment with the \string\newtheorem\ command in the preamble of the document. For example:
+Mathematical thesis often include elements that require special formatting and numbering such as theorems, definitions, propositions, remarks, corollaries, lemmas and so on. Such formatting can be achieved by defining special environment with the \verb+\newtheorem+ command in the preamble of the document. For example:
 
 \begin{theorem}
 Let $f$ be a function whose derivative exists in every point, then $f$ is 
@@ -84,7 +84,7 @@ For the next theorem we need a definition:
 A right triangle is a triangle in which one angle is a right angle (that is, a 90-degree angle).
 \end{definition}
 
-Notice that the definition does not have a number. This can be achieved by defining the definition environment with the \string\newtheorem*{}\ command.
+Notice that the definition does not have a number. This can be achieved by defining the definition environment with the \verb+\newtheorem*{}+ command.
 
 \begin{theorem}[Pythagorean theorem]
 \label{pythagorean}
@@ -100,7 +100,7 @@ corollary (you can reference theorems when a label is assigned).
 There's no right rectangle whose sides measure 3cm, 4cm, and 6cm.
 \end{corollary}
 
-Notice that the Corollary has different numbering. This is because numbering of corollary is tied to the theorem environment with \string\newtheorem{corollary}{Corollary}[theorem]\ , where the square brackets determines the environment that will be used for numbering (also refered to as counter). The same logic can be applied to formulas and theorems, if there are many of such elements. Often the counters are determined by section, for example "Theorem 2.3" refers to the 3rd theorem in the 2nd section of a document. 
+Notice that the Corollary has different numbering, this is because the environment is defined with \verb+\newtheorem{corollary}{Corollary}[theorem]+ , where the square brackets determines the environment that will be used for numbering (also refered to as counter). The same logic can be applied to formulas and theorems, if there are many of such elements. Often the counters are determined by section, for example "Theorem 2.3" refers to the 3rd theorem in the 2nd section of a document. 
 
 By default, each theorem uses its own counter. However it is common for similar types of theorems (e.g. Theorems, Lemmas and Corollaries) to share a counter. In this case, define subsequent theorems as:
 \begin{verbatim}
