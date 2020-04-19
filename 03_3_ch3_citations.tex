@@ -105,3 +105,28 @@ in a \string\relax, so that no surprises ensue.
 
 If you break the command into multiple lines, use the comment sign
 to end each line, to prevent spurious spaces.
+
+Some more examples on how to format citations:
+
+Command: \verb|\citep[see, \textit{e.g.},][]{FreesValdez2008}|\\
+Result: \citep[see, \textit{e.g.},][]{FreesValdez2008}
+
+Command: \verb|\cite{HastieTibshiraniFriedman09,DeJongHeller2008}|\\
+Result: \cite{HastieTibshiraniFriedman09,DeJongHeller2008}
+
+Command: \verb|\citep{HastieTibshiraniFriedman09,DeJongHeller2008}|\\
+Result: \citep{HastieTibshiraniFriedman09,DeJongHeller2008}
+
+Command: \verb|\citep[see, \textit{e.g.},][]{DeJongHeller2008}|\\
+Result: \citep[see, \textit{e.g.},][]{DeJongHeller2008}
+
+Command: \verb|\citep{Kim2013bayesian}|\\
+Result: \citep{Kim2013bayesian}
+
+Command: \verb|\parencite{Kim2013bayesian}|\\
+Result: \parencite{Kim2013bayesian}
+
+
+Command: \texttt{\citep{cizek_etal}, \citep{hogg_klugman}}\\
+Result: \citep{cizek_etal}, \citep{hogg_klugman}
+
