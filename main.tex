@@ -14,9 +14,36 @@
 \newtheorem{corollary}{Corollary}[theorem]
 \newtheorem*{definition}{Definition}
 
-% Settings to use automated references
-\usepackage[style=authoryear,natbib=true,backend=bibtex]{biblatex} % load the package
-\addbibresource{bibliography.bib}
+%Annika_start
+\usepackage[numbers]{natbib}
+\bibliographystyle{Chicago_ff}
+% increase \bibhang to take care of the numbers (adjust at will)
+\setlength{\bibhang}{2pc}
+\makeatletter
+% patch \@lbibitem to print the current number before the authors
+\patchcmd{\@lbibitem}
+  {]}
+  {]\bbl@box{\theNAT@ctr} }
+  {}{}
+% add to the aux file the information about the last number
+\apptocmd{\endthebibliography}
+  {\if@filesw\write\@mainaux{\string\bbl@lastnumber{\theNAT@ctr}}\fi}
+  {}{}
+% allocate a length, set to a provisional value
+\newlength{\bbl@lastnumberwd}
+\setlength\bbl@lastnumberwd{0pt}
+% this command will be in the aux file and sets the widest label width
+\newcommand\bbl@lastnumber[1]{%
+  \settowidth\dimen@{[#1]}%
+  \global\bbl@lastnumberwd\dimen@}
+% a command to print the number
+\newcommand{\bbl@box}[1]{%
+  \makebox[\bbl@lastnumberwd][r]{[#1]}%
+}
+\makeatother
+\setcitestyle{authoryear,open={(},close={)}}
+%Annika_End
+
 
 \title{Title of the thesis}
 \author{Author name}
